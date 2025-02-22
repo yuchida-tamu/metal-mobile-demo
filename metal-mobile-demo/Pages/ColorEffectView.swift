@@ -9,36 +9,33 @@ import PhotosUI
 import SwiftUI
 
 struct ColorEffectView: View {
-    @State var selectedImages: [PhotosPickerItem] = []
-    @State var images: [UIImage] = []
+    @State var selectedImage: PhotosPickerItem? = nil
+    @State var image: UIImage? = nil
 
     var body: some View {
-        VStack{
-            PhotosPicker(selection: $selectedImages, matching: .images){
+        VStack {
+            PhotosPicker(selection: $selectedImage, matching: .images) {
                 Text("Pick Image")
             }
 
-            ScrollView(.horizontal){
-                HStack{
-                    ForEach(images, id: \.self){ image in
-                        Image(uiImage: image)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 250, height: 300)
-                    }
-                }
+            if let image {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 250, height: 300)
             }
-            
+
         }
-        .onChange(of: selectedImages){
+        .onChange(of: selectedImage, initial: false) {
             Task {
-                images = []
-                for item in selectedImages {
-                    guard let data = try await item.loadTransferable(type: Data.self) else {return}
-                    guard let uiImage = UIImage(data: data) else { return }
-                    images.append(uiImage)
-                }
-                
+                image = nil
+                guard
+                    let data = try await selectedImage?.loadTransferable(
+                        type: Data.self)
+                else { return }
+                guard let uiImage = UIImage(data: data) else { return }
+                image = uiImage
+
             }
         }
     }

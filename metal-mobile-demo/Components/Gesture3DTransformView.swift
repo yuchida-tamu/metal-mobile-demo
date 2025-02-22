@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct Gesture3DTransformView<Content: View>: View {
-    var content: () -> Content
-    @State var offset: CGSize = CGSize.zero
+    @ViewBuilder let content: () -> Content
+    @Binding var offset: CGSize
 
     var body: some View {
 
         content()
-            .rotation3DEffect(.degrees(20.0), axis: (x: offset.height, y: offset.width, z: 0))
+            .rotation3DEffect(
+                .degrees(20.0), axis: (x: offset.height, y: offset.width, z: 0)
+            )
             .gesture(
                 DragGesture()
                     .onChanged { gesture in
@@ -30,17 +32,19 @@ struct Gesture3DTransformView<Content: View>: View {
 
     }
 
-    init(content: @escaping () -> Content) {
+    init(offset: Binding<CGSize>, @ViewBuilder content: @escaping () -> Content)
+    {
         self.content = content
+        self._offset = offset
     }
 }
 
 #Preview {
     struct PreviewContent: View {
-
+        @State var offset = CGSize.zero
         var body: some View {
             VStack {
-                Gesture3DTransformView {
+                Gesture3DTransformView(offset: $offset) {
                     ImageCard()
                 }
             }

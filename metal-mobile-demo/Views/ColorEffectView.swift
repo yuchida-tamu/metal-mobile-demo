@@ -11,6 +11,9 @@ import SwiftUI
 struct ColorEffectView: View {
     @State var selectedImage: PhotosPickerItem? = nil
     @State var image: UIImage? = nil
+    @State var offset: CGSize = CGSize.zero
+
+    private let date = Date()
 
     var body: some View {
         VStack {
@@ -18,13 +21,16 @@ struct ColorEffectView: View {
                 Text("Pick Image")
             }
 
-            ImageCard(image: image)
-                .shadow(
-                    color: Color(.sRGBLinear, white: 0, opacity: 0.33),
-                    radius: 8.0,
-                    x: 0,
-                    y: 0
-                )
+            Gesture3DTransformView (offset: $offset) {
+                ImageCard(image: image)
+                    .colorEffect(ShaderLibrary.imageFilterShader(.float(offset.width), .float(offset.height)))
+                    .shadow(
+                        color: Color(.sRGBLinear, white: 0, opacity: 0.33),
+                        radius: 8.0,
+                        x: 0,
+                        y: 0
+                    )
+            }
 
         }
         .onChange(of: selectedImage, initial: false) {

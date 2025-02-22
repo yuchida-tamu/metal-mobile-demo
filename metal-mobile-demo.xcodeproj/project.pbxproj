@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		117716282D6961B8002EB506 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1177160F2D6961B6002EB506 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 117716162D6961B6002EB506;
+			remoteInfo = "metal-mobile-demo";
+		};
+		117716322D6961B8002EB506 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1177160F2D6961B6002EB506 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 117716162D6961B6002EB506;
+			remoteInfo = "metal-mobile-demo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		117716172D6961B6002EB506 /* metal-mobile-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "metal-mobile-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		117716272D6961B8002EB506 /* metal-mobile-demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "metal-mobile-demoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		117716312D6961B8002EB506 /* metal-mobile-demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "metal-mobile-demoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		117716192D6961B6002EB506 /* metal-mobile-demo */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "metal-mobile-demo";
+			sourceTree = "<group>";
+		};
+		1177162A2D6961B8002EB506 /* metal-mobile-demoTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "metal-mobile-demoTests";
+			sourceTree = "<group>";
+		};
+		117716342D6961B8002EB506 /* metal-mobile-demoUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "metal-mobile-demoUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		117716142D6961B6002EB506 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		117716242D6961B8002EB506 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1177162E2D6961B8002EB506 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1177160E2D6961B6002EB506 = {
+			isa = PBXGroup;
+			children = (
+				117716192D6961B6002EB506 /* metal-mobile-demo */,
+				1177162A2D6961B8002EB506 /* metal-mobile-demoTests */,
+				117716342D6961B8002EB506 /* metal-mobile-demoUITests */,
+				117716182D6961B6002EB506 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		117716182D6961B6002EB506 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				117716172D6961B6002EB506 /* metal-mobile-demo.app */,
+				117716272D6961B8002EB506 /* metal-mobile-demoTests.xctest */,
+				117716312D6961B8002EB506 /* metal-mobile-demoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		117716162D6961B6002EB506 /* metal-mobile-demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1177163B2D6961B8002EB506 /* Build configuration list for PBXNativeTarget "metal-mobile-demo" */;
+			buildPhases = (
+				117716132D6961B6002EB506 /* Sources */,
+				117716142D6961B6002EB506 /* Frameworks */,
+				117716152D6961B6002EB506 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				117716192D6961B6002EB506 /* metal-mobile-demo */,
+			);
+			name = "metal-mobile-demo";
+			packageProductDependencies = (
+			);
+			productName = "metal-mobile-demo";
+			productReference = 117716172D6961B6002EB506 /* metal-mobile-demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		117716262D6961B8002EB506 /* metal-mobile-demoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1177163E2D6961B8002EB506 /* Build configuration list for PBXNativeTarget "metal-mobile-demoTests" */;
+			buildPhases = (
+				117716232D6961B8002EB506 /* Sources */,
+				117716242D6961B8002EB506 /* Frameworks */,
+				117716252D6961B8002EB506 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				117716292D6961B8002EB506 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1177162A2D6961B8002EB506 /* metal-mobile-demoTests */,
+			);
+			name = "metal-mobile-demoTests";
+			packageProductDependencies = (
+			);
+			productName = "metal-mobile-demoTests";
+			productReference = 117716272D6961B8002EB506 /* metal-mobile-demoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		117716302D6961B8002EB506 /* metal-mobile-demoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 117716412D6961B8002EB506 /* Build configuration list for PBXNativeTarget "metal-mobile-demoUITests" */;
+			buildPhases = (
+				1177162D2D6961B8002EB506 /* Sources */,
+				1177162E2D6961B8002EB506 /* Frameworks */,
+				1177162F2D6961B8002EB506 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				117716332D6961B8002EB506 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				117716342D6961B8002EB506 /* metal-mobile-demoUITests */,
+			);
+			name = "metal-mobile-demoUITests";
+			packageProductDependencies = (
+			);
+			productName = "metal-mobile-demoUITests";
+			productReference = 117716312D6961B8002EB506 /* metal-mobile-demoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1177160F2D6961B6002EB506 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					117716162D6961B6002EB506 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					117716262D6961B8002EB506 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 117716162D6961B6002EB506;
+					};
+					117716302D6961B8002EB506 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 117716162D6961B6002EB506;
+					};
+				};
+			};
+			buildConfigurationList = 117716122D6961B6002EB506 /* Build configuration list for PBXProject "metal-mobile-demo" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1177160E2D6961B6002EB506;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 117716182D6961B6002EB506 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				117716162D6961B6002EB506 /* metal-mobile-demo */,
+				117716262D6961B8002EB506 /* metal-mobile-demoTests */,
+				117716302D6961B8002EB506 /* metal-mobile-demoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		117716152D6961B6002EB506 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		117716252D6961B8002EB506 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1177162F2D6961B8002EB506 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		117716132D6961B6002EB506 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		117716232D6961B8002EB506 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1177162D2D6961B8002EB506 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		117716292D6961B8002EB506 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 117716162D6961B6002EB506 /* metal-mobile-demo */;
+			targetProxy = 117716282D6961B8002EB506 /* PBXContainerItemProxy */;
+		};
+		117716332D6961B8002EB506 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 117716162D6961B6002EB506 /* metal-mobile-demo */;
+			targetProxy = 117716322D6961B8002EB506 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		117716392D6961B8002EB506 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1177163A2D6961B8002EB506 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1177163C2D6961B8002EB506 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"metal-mobile-demo/Preview Content\"";
+				DEVELOPMENT_TEAM = 55SY7P9Z98;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yuchida.metal-mobile-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1177163D2D6961B8002EB506 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"metal-mobile-demo/Preview Content\"";
+				DEVELOPMENT_TEAM = 55SY7P9Z98;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yuchida.metal-mobile-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1177163F2D6961B8002EB506 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 55SY7P9Z98;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yuchida.metal-mobile-demoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/metal-mobile-demo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/metal-mobile-demo";
+			};
+			name = Debug;
+		};
+		117716402D6961B8002EB506 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 55SY7P9Z98;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yuchida.metal-mobile-demoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/metal-mobile-demo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/metal-mobile-demo";
+			};
+			name = Release;
+		};
+		117716422D6961B8002EB506 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 55SY7P9Z98;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yuchida.metal-mobile-demoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "metal-mobile-demo";
+			};
+			name = Debug;
+		};
+		117716432D6961B8002EB506 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 55SY7P9Z98;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yuchida.metal-mobile-demoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "metal-mobile-demo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		117716122D6961B6002EB506 /* Build configuration list for PBXProject "metal-mobile-demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				117716392D6961B8002EB506 /* Debug */,
+				1177163A2D6961B8002EB506 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1177163B2D6961B8002EB506 /* Build configuration list for PBXNativeTarget "metal-mobile-demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1177163C2D6961B8002EB506 /* Debug */,
+				1177163D2D6961B8002EB506 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1177163E2D6961B8002EB506 /* Build configuration list for PBXNativeTarget "metal-mobile-demoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1177163F2D6961B8002EB506 /* Debug */,
+				117716402D6961B8002EB506 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		117716412D6961B8002EB506 /* Build configuration list for PBXNativeTarget "metal-mobile-demoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				117716422D6961B8002EB506 /* Debug */,
+				117716432D6961B8002EB506 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1177160F2D6961B6002EB506 /* Project object */;
+}

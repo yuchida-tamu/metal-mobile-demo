@@ -8,7 +8,7 @@
 import PhotosUI
 import SwiftUI
 
-struct PlaygroundView: View {
+struct ColorEffectView: View {
     @State var selectedImages: [PhotosPickerItem] = []
     @State var images: [UIImage] = []
 
@@ -45,5 +45,5 @@ struct PlaygroundView: View {
 }
 
 #Preview {
-    PlaygroundView()
+    ColorEffectView()
 }

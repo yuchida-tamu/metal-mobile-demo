@@ -7,13 +7,14 @@
 
 import SwiftUI
 
-struct GestureTransformView<Content: View>: View {
+struct Gesture3DTransformView<Content: View>: View {
     var content: () -> Content
-    @Binding var offset: CGSize
+    @State var offset: CGSize = CGSize.zero
 
     var body: some View {
 
         content()
+            .rotation3DEffect(.degrees(20.0), axis: (x: offset.height, y: offset.width, z: 0))
             .gesture(
                 DragGesture()
                     .onChanged { gesture in
@@ -29,22 +30,19 @@ struct GestureTransformView<Content: View>: View {
 
     }
 
-    init(offset: Binding<CGSize>, content: @escaping () -> Content) {
+    init(content: @escaping () -> Content) {
         self.content = content
-        self._offset = offset
     }
 }
 
 #Preview {
     struct PreviewContent: View {
-        @State var offset = CGSize.zero
+
         var body: some View {
             VStack {
-                GestureTransformView(offset: $offset) {
+                Gesture3DTransformView {
                     ImageCard()
                 }
-
-                Text("\(offset)")
             }
         }
     }

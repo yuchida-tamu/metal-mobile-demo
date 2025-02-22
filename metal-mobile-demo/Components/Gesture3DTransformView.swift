@@ -23,11 +23,7 @@ struct Gesture3DTransformView<Content: View>: View {
                         offset = gesture.translation
                     }
                     .onEnded { _ in
-                        if abs(offset.width) > 100 {
-                            // remove the card
-                        } else {
-                            offset = .zero
-                        }
+                        offset = .zero
                     })
 
     }

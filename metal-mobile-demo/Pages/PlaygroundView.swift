@@ -5,11 +5,16 @@
 //  Created by Yuta Uchida on 2025/02/22.
 //
 
+import PhotosUI
 import SwiftUI
 
 struct PlaygroundView: View {
+    @State var selectedImages: [PhotosPickerItem] = []
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        PhotosPicker(selection: $selectedImages, matching: .images){
+            Text("Pick Image")
+        }
     }
 }
 

@@ -18,12 +18,7 @@ struct ColorEffectView: View {
                 Text("Pick Image")
             }
 
-            if let image {
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 250, height: 300)
-            }
+            ImageCard(image: image)
 
         }
         .onChange(of: selectedImage, initial: false) {

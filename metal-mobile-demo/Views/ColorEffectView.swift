@@ -19,6 +19,12 @@ struct ColorEffectView: View {
             }
 
             ImageCard(image: image)
+                .shadow(
+                    color: Color(.sRGBLinear, white: 0, opacity: 0.33),
+                    radius: 8.0,
+                    x: 0,
+                    y: 0
+                )
 
         }
         .onChange(of: selectedImage, initial: false) {

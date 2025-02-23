@@ -25,7 +25,7 @@ struct ImageCard: View {
                     RoundedRectangle(cornerRadius: 8.0)
                         .frame(width: 250, height: 150)
                         .foregroundStyle(.gray)
-                    
+
                     Text("NO DATA")
                         .foregroundStyle(.white)
                 }
@@ -42,9 +42,15 @@ struct ImageCard: View {
     }
 }
 
-extension ImageCard {
-    func reflective (offset: CGSize) -> some View {
-        modifier(ReflectionViewModifier(offset: offset ))
+extension View {
+    func reflective(offset: CGSize) -> some View {
+        modifier(ReflectionViewModifier(offset: offset))
+    }
+}
+
+extension View {
+    func horographic(offset: CGSize, voronoi: Image) -> some View {
+        modifier(HorographicViewModifier(offset: offset, voronoi: voronoi))
     }
 }
 

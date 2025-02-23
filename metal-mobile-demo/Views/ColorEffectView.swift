@@ -16,11 +16,11 @@ struct ColorEffectView: View {
     var voronoi: Image
 
     private let date = Date()
-    
+
     var rotation: Double {
         let xRotAbs = abs(offset.width)
-        let capped = min(xRotAbs, 50.0);
-        return capped / 50.0;
+        let capped = min(xRotAbs, 50.0)
+        return capped / 50.0
     }
 
     var body: some View {
@@ -32,8 +32,7 @@ struct ColorEffectView: View {
             Gesture3DTransformView(offset: $offset) {
                 ImageCard(image: image)
                     .reflective(offset: offset)
-                    .colorEffect(
-                        ShaderLibrary.holographic(.image(voronoi), .float(rotation)))
+                    .horographic(offset: offset, voronoi: voronoi)
                     .shadow(
                         color: Color(.sRGBLinear, white: 0, opacity: 0.33),
                         radius: 8.0,

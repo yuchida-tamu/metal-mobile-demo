@@ -10,10 +10,10 @@ import PhotosUI
 import SwiftUI
 
 struct PhotoGalleryView: View {
+    @EnvironmentObject var photoGalleryViewModel: PhotoGalleryViewModel
     @State var selectedImage: PhotosPickerItem? = nil
     @State var image: UIImage? = nil
     @State var offset: CGSize = CGSize.zero
-    var voronoi: Image
 
     private let date = Date()
 
@@ -32,7 +32,7 @@ struct PhotoGalleryView: View {
             Gesture3DTransformView(offset: $offset) {
                 ImageCard(image: image)
                     .reflective(offset: offset)
-                    .horographic(offset: offset, voronoi: voronoi)
+                    .horographic(offset: offset, voronoi: photoGalleryViewModel.horographicImage )
                     .shadow(
                         color: Color(.sRGBLinear, white: 0, opacity: 0.33),
                         radius: 8.0,
@@ -55,25 +55,9 @@ struct PhotoGalleryView: View {
             }
         }
     }
-
-    init(voronoi: Image) {
-        self.voronoi = voronoi
-    }
-
 }
 
 #Preview {
-    func makeVoronoi() -> Image {
-        let voronoiNoiseSource = GKVoronoiNoiseSource(
-            frequency: 20, displacement: 1, distanceEnabled: false, seed: 555)
-        let noise = GKNoise(voronoiNoiseSource)
-        let noiseMap = GKNoiseMap(
-            noise, size: .init(x: 1, y: 1), origin: .zero,
-            sampleCount: .init(x: 900, y: 900), seamless: true)
-        let texture = SKTexture(noiseMap: noiseMap)
-        let cgImage = texture.cgImage()
-        return Image(cgImage, scale: 1, label: Text(""))
-    }
-
-    return PhotoGalleryView(voronoi: makeVoronoi())
+    PhotoGalleryView()
+        .environmentObject(PhotoGalleryViewModel())
 }

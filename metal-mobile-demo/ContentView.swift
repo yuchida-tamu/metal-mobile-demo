@@ -9,9 +9,12 @@ import SwiftUI
 import GameplayKit
 
 struct ContentView: View {
+    var photoGalleryViewModel = PhotoGalleryViewModel()
+    
     var body: some View {
         TabView{
-            PhotoGalleryView(voronoi: makeVoronoi())
+            PhotoGalleryView()
+                .environmentObject(photoGalleryViewModel)
                 .tabItem{
                     Image(systemName: "square.grid.2x2")
                     Text("gallery")

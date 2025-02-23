@@ -9,7 +9,7 @@ import GameplayKit
 import PhotosUI
 import SwiftUI
 
-struct ColorEffectView: View {
+struct PhotoGalleryView: View {
     @State var selectedImage: PhotosPickerItem? = nil
     @State var image: UIImage? = nil
     @State var offset: CGSize = CGSize.zero
@@ -75,5 +75,5 @@ struct ColorEffectView: View {
         return Image(cgImage, scale: 1, label: Text(""))
     }
 
-    return ColorEffectView(voronoi: makeVoronoi())
+    return PhotoGalleryView(voronoi: makeVoronoi())
 }

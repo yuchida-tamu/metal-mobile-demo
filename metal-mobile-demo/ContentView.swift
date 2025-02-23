@@ -11,7 +11,7 @@ import GameplayKit
 struct ContentView: View {
     var body: some View {
         TabView{
-            ColorEffectView(voronoi: makeVoronoi())
+            PhotoGalleryView(voronoi: makeVoronoi())
                 .tabItem{
                     Image(systemName: "square.grid.2x2")
                     Text("gallery")

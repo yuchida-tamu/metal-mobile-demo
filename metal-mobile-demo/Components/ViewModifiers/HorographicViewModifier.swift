@@ -18,10 +18,14 @@ struct HorographicViewModifier: ViewModifier {
         return capped / 50.0;
     }
     
+    var saturation: Double {
+        return magnitude * 1.3
+    }
+    
     func body(content: Content) -> some View {
         content
             .colorEffect(
-                ShaderLibrary.holographic(.image(voronoi), .float(magnitude))
+                ShaderLibrary.holographic(.image(voronoi), .float(magnitude), .float(saturation))
             )
     }
 }

@@ -14,6 +14,13 @@ struct ContentView: View {
             ColorEffectView(voronoi: makeVoronoi())
                 .tabItem{
                     Image(systemName: "square.grid.2x2")
+                    Text("gallery")
+                }
+            
+            SettingsView()
+                .tabItem{
+                    Image(systemName: "gearshape")
+                    Text("settings")
                 }
         }
     }

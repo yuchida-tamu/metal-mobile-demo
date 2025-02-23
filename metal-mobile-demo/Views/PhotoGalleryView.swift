@@ -30,19 +30,25 @@ struct PhotoGalleryView: View {
                 Text("Add Images")
             }
 
-            Gesture3DTransformView(offset: $offset) {
-                ImageCard(image: loadedImages.first)
-                    .reflective(offset: offset)
-                    .horographic(
-                        offset: offset,
-                        voronoi: photoGalleryViewModel.horographicImage
-                    )
-                    .shadow(
-                        color: Color(.sRGBLinear, white: 0, opacity: 0.33),
-                        radius: 8.0,
-                        x: 0,
-                        y: 0
-                    )
+            ScrollView {
+                LazyVGrid(
+                    columns: [GridItem(spacing: 8), GridItem(spacing: 8), GridItem(spacing: 8)],
+                    spacing: 8
+                ) {
+                    ForEach(loadedImages, id: \.self) { image in
+                        ImageCard(image: image)
+                            .horographic(
+                                offset: offset,
+                                voronoi: photoGalleryViewModel.horographicImage
+                            )
+                            .shadow(
+                                color: Color(.sRGBLinear, white: 0, opacity: 0.33),
+                                radius: 8.0,
+                                x: 0,
+                                y: 0
+                            )
+                    }
+                }
             }
 
         }

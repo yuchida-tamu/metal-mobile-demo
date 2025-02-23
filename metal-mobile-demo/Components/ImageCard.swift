@@ -19,11 +19,10 @@ struct ImageCard: View {
                     .clipShape(
                         RoundedRectangle(cornerRadius: 8.0)
                     )
-                    .frame(width: 250)
+                   
             } else {
                 ZStack {
                     RoundedRectangle(cornerRadius: 8.0)
-                        .frame(width: 250, height: 150)
                         .foregroundStyle(.gray)
 
                     Text("NO DATA")

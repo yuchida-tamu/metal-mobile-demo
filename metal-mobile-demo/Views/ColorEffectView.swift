@@ -31,10 +31,7 @@ struct ColorEffectView: View {
 
             Gesture3DTransformView(offset: $offset) {
                 ImageCard(image: image)
-                    .colorEffect(
-                        ShaderLibrary.imageFilterShader(
-                            .float(offset.width), .float(offset.height))
-                    )
+                    .reflective(offset: offset)
                     .colorEffect(
                         ShaderLibrary.holographic(.image(voronoi), .float(rotation)))
                     .shadow(

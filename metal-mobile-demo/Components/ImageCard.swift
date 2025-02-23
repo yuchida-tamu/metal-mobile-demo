@@ -42,6 +42,12 @@ struct ImageCard: View {
     }
 }
 
+extension ImageCard {
+    func reflective (offset: CGSize) -> some View {
+        modifier(ReflectionViewModifier(offset: offset ))
+    }
+}
+
 #Preview {
     ImageCard()
         .shadow(

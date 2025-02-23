@@ -10,13 +10,11 @@ import GameplayKit
 
 struct ContentView: View {
     var body: some View {
-        NavigationStack {
-            VStack {
-                NavigationLink("ColorEffect"){
-                    ColorEffectView(voronoi: makeVoronoi())
+        TabView{
+            ColorEffectView(voronoi: makeVoronoi())
+                .tabItem{
+                    Image(systemName: "square.grid.2x2")
                 }
-            }
-            .padding()
         }
     }
     func makeVoronoi() -> Image {

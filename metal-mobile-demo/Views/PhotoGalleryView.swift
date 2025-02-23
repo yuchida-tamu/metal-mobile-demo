@@ -11,8 +11,8 @@ import SwiftUI
 
 struct PhotoGalleryView: View {
     @EnvironmentObject var photoGalleryViewModel: PhotoGalleryViewModel
-    @State var selectedImage: PhotosPickerItem? = nil
-    @State var image: UIImage? = nil
+    @State var selectedImages: [PhotosPickerItem] = []
+    @State var loadedImages: [UIImage] = []
     @State var offset: CGSize = CGSize.zero
 
     private let date = Date()
@@ -25,14 +25,18 @@ struct PhotoGalleryView: View {
 
     var body: some View {
         VStack {
-            PhotosPicker(selection: $selectedImage, matching: .images) {
-                Text("Pick Image")
+            PhotosPicker(selection: $selectedImages, matching: .images) {
+                Image(systemName: "photo.badge.plus.fill")
+                Text("Add Images")
             }
 
             Gesture3DTransformView(offset: $offset) {
-                ImageCard(image: image)
+                ImageCard(image: loadedImages.first)
                     .reflective(offset: offset)
-                    .horographic(offset: offset, voronoi: photoGalleryViewModel.horographicImage )
+                    .horographic(
+                        offset: offset,
+                        voronoi: photoGalleryViewModel.horographicImage
+                    )
                     .shadow(
                         color: Color(.sRGBLinear, white: 0, opacity: 0.33),
                         radius: 8.0,
@@ -42,15 +46,18 @@ struct PhotoGalleryView: View {
             }
 
         }
-        .onChange(of: selectedImage, initial: false) {
+        .onChange(of: selectedImages, initial: false) {
             Task {
-                image = nil
-                guard
-                    let data = try await selectedImage?.loadTransferable(
-                        type: Data.self)
-                else { return }
-                guard let uiImage = UIImage(data: data) else { return }
-                image = uiImage
+                loadedImages = []
+
+                for image in selectedImages {
+                    guard
+                        let data = try await image.loadTransferable(
+                            type: Data.self)
+                    else { return }
+                    guard let uiImage = UIImage(data: data) else { return }
+                    loadedImages.append(uiImage)
+                }
 
             }
         }

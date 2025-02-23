@@ -5,13 +5,13 @@
 //  Created by Yuta Uchida on 2025/02/23.
 //
 
-import SwiftUI
-import PhotosUI
 import GameplayKit
+import PhotosUI
+import SwiftUI
 
 class PhotoGalleryViewModel: ObservableObject {
     var horographicImage: Image
-    
+
     init() {
         let voronoiNoiseSource = GKVoronoiNoiseSource(
             frequency: 20, displacement: 1, distanceEnabled: false, seed: 555)
@@ -21,7 +21,7 @@ class PhotoGalleryViewModel: ObservableObject {
             sampleCount: .init(x: 900, y: 900), seamless: true)
         let texture = SKTexture(noiseMap: noiseMap)
         let cgImage = texture.cgImage()
-        
+
         self.horographicImage = Image(cgImage, scale: 1, label: Text(""))
     }
 }

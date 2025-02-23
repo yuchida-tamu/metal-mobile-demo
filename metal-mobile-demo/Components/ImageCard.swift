@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ImageCard: View {
     var image: UIImage? = nil
+    var padding = 16.0
 
     var body: some View {
         VStack {
@@ -31,13 +32,21 @@ struct ImageCard: View {
             }
 
         }
-        .padding()
+        .padding(padding)
         .background(.white)
         .clipShape(RoundedRectangle(cornerRadius: 8.0))
     }
 
     init(image: UIImage? = nil) {
         self.image = image
+    }
+}
+
+extension ImageCard {
+    func small() -> some View {
+        var updated = self
+        updated.padding = 4
+        return updated
     }
 }
 

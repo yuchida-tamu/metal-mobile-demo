@@ -25,10 +25,15 @@ struct PhotoGalleryView: View {
 
     var body: some View {
         VStack {
-            PhotosPicker(selection: $selectedImages, matching: .images) {
-                Image(systemName: "photo.badge.plus.fill")
-                Text("Add Images")
+            HStack {
+                Spacer()
+                PhotosPicker(selection: $selectedImages, matching: .images) {
+                    Image(systemName: "photo.badge.plus.fill")
+                    Text("Add Images")
+                }
             }
+            .padding(.vertical, 8)
+            .padding(.horizontal, 16)
 
             ScrollView {
                 LazyVGrid(
@@ -37,6 +42,7 @@ struct PhotoGalleryView: View {
                 ) {
                     ForEach(loadedImages, id: \.self) { image in
                         ImageCard(image: image)
+                            .small()
                             .horographic(
                                 offset: offset,
                                 voronoi: photoGalleryViewModel.horographicImage

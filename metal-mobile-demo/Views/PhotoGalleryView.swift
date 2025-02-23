@@ -43,7 +43,7 @@ struct PhotoGalleryView: View {
                             )
                             .shadow(
                                 color: Color(.sRGBLinear, white: 0, opacity: 0.33),
-                                radius: 8.0,
+                                radius: 4.0,
                                 x: 0,
                                 y: 0
                             )

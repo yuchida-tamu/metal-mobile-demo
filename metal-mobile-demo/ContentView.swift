@@ -6,17 +6,26 @@
 //
 
 import SwiftUI
+import GameplayKit
 
 struct ContentView: View {
     var body: some View {
         NavigationStack {
             VStack {
                 NavigationLink("ColorEffect"){
-                    ColorEffectView()
+                    ColorEffectView(voronoi: makeVoronoi())
                 }
             }
             .padding()
         }
+    }
+    func makeVoronoi() -> Image {
+        let voronoiNoiseSource = GKVoronoiNoiseSource(frequency: 20, displacement: 1, distanceEnabled: false, seed: 555)
+        let noise = GKNoise(voronoiNoiseSource)
+        let noiseMap = GKNoiseMap(noise, size: .init(x: 1, y: 1), origin: .zero, sampleCount: .init(x: 900, y: 900), seamless: true)
+        let texture = SKTexture(noiseMap: noiseMap)
+        let cgImage = texture.cgImage()
+        return Image(cgImage, scale: 1, label: Text(""))
     }
 }
 

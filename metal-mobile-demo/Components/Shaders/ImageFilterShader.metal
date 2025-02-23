@@ -8,12 +8,6 @@
 #include <metal_stdlib>
 using namespace metal;
 
-template<typename Txy, typename Ta>
-inline Txy mix(Txy x, Txy y, Ta a)
-{
-    return x + (y - x) * a;
-}
-
 struct VertexIn {
     float4 position [[attribute(0)]];
     float2 texcoord [[attribute(1)]];
@@ -51,8 +45,7 @@ vertex VertexOut vertexShader(VertexIn in [[stage_in]]) {
     
     // Create a highlight color (e.g., white or a lighter version of your base color).
     half4 highlightColor = half4(1.0, 1.0, 1.0, 1.0); // White highlight
-    
-    half4 finalColor = color + ( highlightColor - color ) * ( reflectionFactor * 0.5f );
+    half4 finalColor = color + ( highlightColor - color ) * ( reflectionFactor * 0.1f );
 
     
     return finalColor;
